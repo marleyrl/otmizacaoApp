@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Pokemon Go: Better XP</string>
+    <string name="main_activity_welcome_trainer">Olá, treinador Pokémon!</string>
+    <string name="main_activity_app_mission">Nós vamos te ajudar a alcançar o máximo de XP durante o seu lucky egg.</string>
+    <string name="action_next">Continuar</string>
+    <string name="msg_how_many_pokemon_to_evolve">Quantos Pokémons você tem guardados pra evoluir?</string>
+    <string name="hint_val_50">Ex.: 50</string>
+    <string name="msg_how_many_transfer">Quantos Pokémons você planeja transferir?</string>
+    <string name="msg_how_many_eggs_owned">Quantos ovos você possui?</string>
+    <string name="label_egg_2km">2 km</string>
+    <string name="label_egg_5km">5 km</string>
+    <string name="label_egg_10km">10 km</string>
+    <string name="action_catch">Capture</string>
+    <string name="action_evolve">Evolua</string>
+    <string name="action_transfer">Transfira</string>
+    <string name="action_hatch">Chocar</string>
+    <string name="loading_msg">Calculando…</string>
+
+    <string name="total_format">TOTAL: %d XP</string>
+    <string name="title_activity_result">Resultado</string>
+
+    <plurals name="pokemons">
+        <item quantity="one">%d Pokémon</item>
+        <item quantity="other">%d Pokémons</item>
+    </plurals>
+
+    <plurals name="eggs_2km">
+        <item quantity="one">%d ovo de 2 km</item>
+        <item quantity="other">%d ovos de 2 km</item>
+    </plurals>
+
+    <plurals name="eggs_5km">
+        <item quantity="one">%d ovo de 5 km</item>
+        <item quantity="other">%d ovos de 5 km</item>
+    </plurals>
+
+    <plurals name="eggs_10km">
+        <item quantity="one">%d ovo de 10 km</item>
+        <item quantity="other">%d ovos de 10 km</item>
+    </plurals>
+</resources>

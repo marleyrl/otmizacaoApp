@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="restriction2km"
+            type="me.cassiano.betterxp.model.Restriction" />
+
+        <variable
+            name="restriction5km"
+            type="me.cassiano.betterxp.model.Restriction" />
+
+        <variable
+            name="restriction10km"
+            type="me.cassiano.betterxp.model.Restriction" />
+
+        <variable
+            name="listener"
+            type="me.cassiano.betterxp.adapter.StepsViewPagerAdapter.OnNextClickListener" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="77dp"
+                android:src="@drawable/eggs" />
+
+            <TextView
+                style="@style/TextStyle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:text="@string/msg_how_many_eggs_owned" />
+
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp">
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        style="@style/TextStyle5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:text="@string/label_egg_2km" />
+
+                    <EditText
+                        style="@style/TextStyle4.EditText.NoMargin"
+                        android:layout_width="95dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:hint="@string/hint_val_50"
+                        android:text="@={restriction2km.stringValue}" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        style="@style/TextStyle5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:text="@string/label_egg_5km" />
+
+                    <EditText
+                        style="@style/TextStyle4.EditText.NoMargin"
+                        android:layout_width="95dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:hint="@string/hint_val_50"
+                        android:text="@={restriction5km.stringValue}" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        style="@style/TextStyle5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:text="@string/label_egg_10km" />
+
+                    <EditText
+                        style="@style/TextStyle4.EditText.NoMargin"
+                        android:layout_width="95dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:hint="@string/hint_val_50"
+                        android:text="@={restriction10km.stringValue}" />
+
+
+                </TableRow>
+
+            </TableLayout>
+
+
+            <Button
+                style="@style/NextButtonStyle"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="34dp"
+                android:layout_marginBottom="34dp"
+                android:onClick="@{() -> listener.onNextClicked()}"
+                android:text="@string/action_next" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

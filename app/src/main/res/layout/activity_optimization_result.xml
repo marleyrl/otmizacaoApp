@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="me.cassiano.betterxp.viewmodel.OptimizationResultViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="27dp"
+                android:src="@drawable/pokemon_trainer_girl" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:fadeVisible="@{!viewModel.isLoading}">
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp">
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/gotcha" />
+
+                        <LinearLayout
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginStart="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/TextStyle6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/action_catch" />
+
+                            <TextView
+                                style="@style/TextStyle7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{@plurals/pokemons(viewModel.solution.catches, viewModel.solution.catches)}"
+                                tools:text="13 Pokémons" />
+
+
+                        </LinearLayout>
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="20dp">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/eevee" />
+
+                        <LinearLayout
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginStart="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/TextStyle6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/action_evolve" />
+
+                            <TextView
+                                style="@style/TextStyle7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{@plurals/pokemons(viewModel.solution.evolutions, viewModel.solution.evolutions)}"
+                                tools:text="54 Pokémons" />
+
+
+                        </LinearLayout>
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="20dp">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/pokemon_go_arrow" />
+
+                        <LinearLayout
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginStart="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/TextStyle6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/action_transfer" />
+
+                            <TextView
+                                style="@style/TextStyle7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{@plurals/pokemons(viewModel.solution.transfers, viewModel.solution.transfers)}"
+                                tools:text="5 Pokémons" />
+
+
+                        </LinearLayout>
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="20dp">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/hatching_egg" />
+
+                        <LinearLayout
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginStart="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/TextStyle6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/action_hatch" />
+
+                            <TextView
+                                style="@style/TextStyle7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{@plurals/eggs_2km(viewModel.solution.twokmEggs, viewModel.solution.twokmEggs)}"
+                                tools:text="1 ovo de 2 km" />
+
+                            <TextView
+                                style="@style/TextStyle7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{@plurals/eggs_5km(viewModel.solution.fivekmEggs, viewModel.solution.fivekmEggs)}"
+                                tools:text="1 ovo de 5 km" />
+
+                            <TextView
+                                style="@style/TextStyle7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{@plurals/eggs_10km(viewModel.solution.tenkmEggs, viewModel.solution.tenkmEggs)}"
+                                tools:text="0 ovos de 10 km" />
+
+
+                        </LinearLayout>
+
+
+                    </TableRow>
+
+                </TableLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="@{viewModel.totalXPSpannable}"
+                    android:textAppearance="@style/TextStyle9"
+                    tools:text="TOTAL: 76,000 XP" />
+
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/partial_loading_result"
+                app:viewModel="@{viewModel}" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</layout>

@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+    defaultConfig {
+        applicationId "me.cassiano.betterxp"
+        minSdkVersion 16
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.google.code.gson:gson:2.7'
+
+    compile 'com.robinhood.ticker:ticker:1.1.0'
+
+    //Retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+
+    //RxAndroid
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.1.6'
+
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+
+    compile 'com.github.florent37:viewanimator:1.0.4'
+
+    compile 'org.parceler:parceler-api:1.1.5'
+    apt 'org.parceler:parceler:1.1.5'
+}

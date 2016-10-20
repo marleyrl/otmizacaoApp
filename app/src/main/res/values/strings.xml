@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Pokemon Go: Better XP</string>
+    <string name="app_name">Pokemais</string>
     <string name="main_activity_welcome_trainer">Olá, treinador Pokémon!</string>
     <string name="main_activity_app_mission">Nós vamos te ajudar a alcançar o máximo de XP durante o seu lucky egg.</string>
     <string name="action_next">Continuar</string>
